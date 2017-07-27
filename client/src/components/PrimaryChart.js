@@ -1,8 +1,9 @@
 import React from 'react'
+let LineChart = require("react-chartjs").Line;
 
-const PrimaryChart = props => {
+const PrimaryChart = ({data}) => {
   return (
-    <div>PrimaryChart</div>
+    <LineChart data={data} width="670" height="340" />
   )
 }
 
