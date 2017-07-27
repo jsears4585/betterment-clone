@@ -4,6 +4,25 @@
 
 .dashboardContainer {
   margin-top: 30px!important;
+  padding-top: 32px!important;
   height: 490px!important;
   min-width: 900px!important;
+}
+
+.inlineBlockHeader {
+  text-indent: 20px;
+  display: inline-block;
+  color: grey;
+}
+
+.plusIcon {
+  position: relative;
+  bottom: 4px;
+  left: 3px;
+  color: #1ba51b;
+  cursor: pointer;
+}
+
+.header {
+  color: grey!important;
 }
