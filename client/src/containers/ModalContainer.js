@@ -15,7 +15,7 @@ class ModalContainer extends Component {
       'If you lost 10% of your portfolio in a month...',
     ],
     riskType: null,
-    modalOpen: true
+    modalOpen: false
   }
 
   nextQuestion = () => {
