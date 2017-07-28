@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Modal } from 'semantic-ui-react'
+import Form from '../components/Form'
 
 import Survey from '../components/Survey'
 import PortfolioSelector from '../components/PortfolioSelector'
@@ -15,7 +16,7 @@ class ModalContainer extends Component {
       'If you lost 10% of your portfolio in a month...',
     ],
     riskType: null,
-    modalOpen: false
+    modalOpen: true
   }
 
   nextQuestion = () => {
@@ -35,6 +36,8 @@ class ModalContainer extends Component {
     this.setState({ modalOpen: false })
   }
 
+  formComponent
+
   render() {
     let componentToRender
     if (!this.state.isLastQuestion) {
@@ -43,7 +46,10 @@ class ModalContainer extends Component {
         buttonText={this.state.buttonText}
         nextQuestion={this.nextQuestion}
         currentQuestion={this.state.questionsArray[this.state.currentQuestionIndex]}
+
       />
+
+
     } else {
       componentToRender =
       <PortfolioSelector handleClose={this.handleClose} />
@@ -54,7 +60,10 @@ class ModalContainer extends Component {
         open={this.state.modalOpen}
         onClose={this.handleClose}
       >
-        {componentToRender}
+      {componentToRender}
+      <Form />
+
+
       </Modal>
     )
   }
