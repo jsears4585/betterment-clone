@@ -1,38 +1,88 @@
-.content {
-  background: #fdfdfd!important;
+@import 'https://code.highcharts.com/css/highcharts.css';
+
+html { height: 95% }
+
+#logo_container {
+  margin: 2em auto 0;
+  width: 444px;
 }
 
+#svg_logo {
+  width: 200px;
+  display: inline-block;
+}
+
+#financial_logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 90px;
+  width: 200px;
+  color: #1dc087;
+  display: inline-block;
+  position: relative;
+  bottom: 35px;
+  right: 41px;
+}
+
+.accordion .title { color: #425a7f!important; }
+
+.accordion .content { color: rgba(0,0,0,.68); }
+
+.highcharts-background {
+	fill: #eff2f4;
+	stroke: #eff2f4;
+	stroke-width: 2px;
+}
+
+.highcharts-button-box { fill: #eff2f4; }
+
+html, body {
+  background: #132745;
+  background-image: url('https://www.transparenttextures.com/patterns/diagonal-noise.png');
+}
+
+.content { background: #fdfdfd!important; }
+
 .dashboardContainer {
-  margin-top: 30px!important;
+  margin-top: 2px!important;
   padding-top: 32px!important;
   height: 490px!important;
   min-width: 900px!important;
+  background: #eff2f4!important;
+  margin-bottom: 73px!important;
 }
 
 .inlineBlockHeader {
   text-indent: 20px;
   display: inline-block;
-  color: grey;
+  color: #425a7f;
+}
+
+.highcharts-title {
+  color: #425a7f!important;
+  font-size: 22px!important;
 }
 
 .plusIcon {
   position: relative;
   bottom: 4px;
   left: 3px;
-  color: #6584c1;
-  cursor: pointer;
+  color: #425a7f;
 }
 
-.header {
-  color: grey!important;
-}
+.header { color: #425a7f!important; }
 
-.ui.card:first-child {
-  margin-top: 46px!important;
-}
+.ui.card:first-child { margin-top: 64px!important; }
 
 .ui.styled.accordion .accordion .title:first-child, .ui.styled.accordion>.title:first-child {
-    margin-top: 47px!important;
+  margin-top: 74px!important;
 }
 
 .highcharts-credits { display: none }
+
+.settings-icon {
+  display: inline-block;
+  float: right;
+  color: #425a7f;
+}
+
+.icon { cursor:pointer; }

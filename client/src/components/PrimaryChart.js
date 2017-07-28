@@ -13,7 +13,7 @@ const PrimaryChart = ({formattedData}) => {
     },
 
     title: {
-      text: 'IGOV Price'
+      text: 'IGOV'
     },
 
     series: [{

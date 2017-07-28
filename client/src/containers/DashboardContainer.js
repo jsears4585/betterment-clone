@@ -41,6 +41,7 @@ class DashboardContainer extends Component {
               <PrimaryChart formattedData={this.state.formattedData} />
             </Grid.Column>
             <Grid.Column width={3}>
+              <i className="big settings icon settings-icon"></i>
               <DetailsAccordion />
             </Grid.Column>
           </Grid.Row>
