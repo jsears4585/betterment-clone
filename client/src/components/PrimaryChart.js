@@ -1,24 +1,29 @@
 import React from 'react'
-let LineChart = require("react-chartjs").Line;
+import ReactHighstock from 'react-highcharts/ReactHighstock'
 
-const PrimaryChart = ({data, newData, newLabels}) => {
+const PrimaryChart = ({formattedData}) => {
 
-  let chartData = {
-      datasets: [{
-        data: newData,
-        fillColor: "rgba(220,220,220,0.2)",
-        label: "Test Dataset",
-        pointColor: "rgba(220,220,220,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        pointStrokeColor: "#fff",
-        strokeColor: "rgba(220,220,220,1)"
-      }],
-      labels: newLabels
-    }
+  const config = {
+    rangeSelector: {
+      selected: 1
+    },
+
+    title: {
+      text: 'IGOV Price'
+    },
+
+    series: [{
+      name: 'IGOV',
+      data: formattedData,
+      tooltip: {
+        valueDecimals: 2
+      }
+    }]
+  }
 
   return (
-    <LineChart data={chartData} width="670" height="340" redraw />
+    <ReactHighstock config={config}>
+    </ReactHighstock>
   )
 }
 

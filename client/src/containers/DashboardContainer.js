@@ -6,23 +6,26 @@ import AddFundsModal from '../components/AddFundsModal'
 import PrimaryChart from '../components/PrimaryChart'
 import DetailsAccordion from '../components/DetailsAccordion'
 
-import BND from '../data/BND.js'
+import IGOV from '../data/IGOV.js'
 
 import '../App.css'
 
 class DashboardContainer extends Component {
   state = {
-    newLabels: [],
-    newData: []
+    formattedData: []
   }
 
   componentDidMount() {
-    let labels = Object.keys(BND)
-    let datapoints = Object.values(BND)
-    this.setState({
-      newLabels: labels,
-      newData: datapoints
+    let labels = Object.keys(IGOV)
+    let datapoints = Object.values(IGOV)
+    let formattedData = []
+    labels.forEach(function(el, index) {
+      let subArr = el.split('-')
+      let date = new Date(`${subArr[1]}-${subArr[2]}-${subArr[0]}`).getTime()
+      formattedData.push([ date, parseFloat(datapoints[index]) ])
     })
+    formattedData.reverse()
+    this.setState({ formattedData: formattedData })
   }
 
   render() {
@@ -35,7 +38,7 @@ class DashboardContainer extends Component {
               <AddFundsModal />
             </Grid.Column>
             <Grid.Column width={10}>
-              <PrimaryChart newData={this.state.newData} newLabels={this.state.newLabels} />
+              <PrimaryChart formattedData={this.state.formattedData} />
             </Grid.Column>
             <Grid.Column width={3}>
               <DetailsAccordion />
