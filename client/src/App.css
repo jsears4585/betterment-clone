@@ -1,9 +1,17 @@
 @import 'https://code.highcharts.com/css/highcharts.css';
 
-html { height: 95% }
+html { height: 90% }
+
+.ui.styled.accordion .content {
+    padding: .5em 1em 1.5em!important;
+}
+
+.ui[class*="vertically divided"].grid>.row:first-child>.column {
+    padding: 22px!important;
+}
 
 #logo_container {
-  margin: 2em auto 0;
+  margin: 3.9em auto 0;
   width: 444px;
 }
 
@@ -45,28 +53,25 @@ html, body {
 .dashboardContainer {
   margin-top: 2px!important;
   padding-top: 32px!important;
-  height: 490px!important;
+  height: 517px!important;
   min-width: 900px!important;
   background: #eff2f4!important;
   margin-bottom: 73px!important;
 }
 
 .inlineBlockHeader {
-  text-indent: 20px;
+  text-indent: 14px;
   display: inline-block;
   color: #425a7f;
+  cursor: pointer;
 }
 
-.highcharts-title {
-  color: #425a7f!important;
-  font-size: 22px!important;
+.inlineBlockHeader:hover {
+  color: #1dc087;
 }
 
-.plusIcon {
-  position: relative;
-  bottom: 4px;
-  left: 3px;
-  color: #425a7f;
+.highcharts-title tspan {
+  fill: #425a7f;
 }
 
 .header { color: #425a7f!important; }
