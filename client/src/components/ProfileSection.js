@@ -4,9 +4,9 @@ import { Card } from 'semantic-ui-react'
 const ProfileSection = props => {
   return (
     <Card
-      image='/images/dummy-profile.jpg'
-      header='Your name here'
-      description='Information goes here.'
+      image='/images/kyrie.jpg'
+      header='Kyrie Irving'
+      description='Done with it.'
     />
   )
 }

@@ -19,10 +19,20 @@
   position: relative;
   bottom: 4px;
   left: 3px;
-  color: #1ba51b;
+  color: #6584c1;
   cursor: pointer;
 }
 
 .header {
   color: grey!important;
 }
+
+.ui.card:first-child {
+  margin-top: 46px!important;
+}
+
+.ui.styled.accordion .accordion .title:first-child, .ui.styled.accordion>.title:first-child {
+    margin-top: 47px!important;
+}
+
+.highcharts-credits { display: none }
