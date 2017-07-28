@@ -39,6 +39,7 @@ class ModalContainer extends Component {
   formComponent
 
   render() {
+    console.log(this.state.isLastQuestion)
     let componentToRender
     if (!this.state.isLastQuestion) {
       componentToRender =
@@ -61,9 +62,7 @@ class ModalContainer extends Component {
         onClose={this.handleClose}
       >
       {componentToRender}
-      <Form />
-
-
+      <Form questions={this.state.currentQuestionIndex} isLastQuestion={this.state.isLastQuestion}/>
       </Modal>
     )
   }
