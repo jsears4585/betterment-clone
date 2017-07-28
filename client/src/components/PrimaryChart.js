@@ -5,7 +5,7 @@ import ReactHighstock from 'react-highcharts/ReactHighstock'
 let Highcharts = require('highcharts/highstock');
 require('highcharts/modules/exporting')(Highcharts);
 
-const PrimaryChart = ({formattedData}) => {
+const PrimaryChart = props => {
 
   const config = {
     rangeSelector: {
@@ -13,12 +13,12 @@ const PrimaryChart = ({formattedData}) => {
     },
 
     title: {
-      text: 'IGOV'
+      text: props.selectedFund
     },
 
     series: [{
-      name: 'IGOV',
-      data: formattedData,
+      name: props.selectedFund,
+      data: props.formattedData,
       tooltip: {
         valueDecimals: 2
       }

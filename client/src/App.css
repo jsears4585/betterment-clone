@@ -6,6 +6,15 @@ html { height: 90% }
     padding: .5em 1em 1.5em!important;
 }
 
+#accordionDiv {
+  margin-top: 31px!important;
+}
+
+.dropdown .text {
+  font-size: 1.1em!important;
+  line-height: 1.2!important;
+}
+
 .ui[class*="vertically divided"].grid>.row:first-child>.column {
     padding: 22px!important;
 }
@@ -85,9 +94,7 @@ html, body {
 .highcharts-credits { display: none }
 
 .settings-icon {
-  display: inline-block;
-  float: right;
-  color: #425a7f;
+  float: left;
 }
 
 .icon { cursor:pointer; }

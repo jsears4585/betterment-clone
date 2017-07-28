@@ -4,8 +4,8 @@ import { Accordion, Icon } from 'semantic-ui-react'
 const DetailsAccordion = props => {
 
   return (
-    <Accordion styled>
-      <Accordion.Title onClick={()=>(console.log('clicked VOO'))}>
+    <Accordion fluid={true} styled>
+      <Accordion.Title onClick={()=>(props.selectFund('VOO'))}>
         <Icon name='dropdown' />
         VOO
       </Accordion.Title>
@@ -13,9 +13,9 @@ const DetailsAccordion = props => {
         Price: <br />
         Mkt Cap: <br />
         Expenses: <br />
-        Category: 
+        Category:
       </Accordion.Content>
-      <Accordion.Title onClick={()=>(console.log('clicked BND'))}>
+      <Accordion.Title onClick={()=>(props.selectFund('BND'))}>
         <Icon name='dropdown' />
         BND
       </Accordion.Title>
@@ -25,7 +25,7 @@ const DetailsAccordion = props => {
         Expenses: <br />
         Category:
       </Accordion.Content>
-      <Accordion.Title onClick={()=>(console.log('clicked IGOV'))}>
+      <Accordion.Title onClick={()=>(props.selectFund('IGOV'))}>
         <Icon name='dropdown' />
         IGOV
       </Accordion.Title>
@@ -35,7 +35,7 @@ const DetailsAccordion = props => {
         Expenses: <br />
         Category:
       </Accordion.Content>
-      <Accordion.Title onClick={()=>(console.log('clicked VXUS'))}>
+      <Accordion.Title onClick={()=>(props.selectFund('VXUS'))}>
         <Icon name='dropdown' />
         VXUS
       </Accordion.Title>
