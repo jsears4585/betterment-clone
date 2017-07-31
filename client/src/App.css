@@ -120,3 +120,11 @@ html, body {
 .add-funds-modal {
   text-align: center!important;
 }
+
+.banks {
+  display: inline-block;
+}
+
+.banks #add-bank {
+  margin-left: 20px!important;
+}
