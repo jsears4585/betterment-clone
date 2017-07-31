@@ -8,26 +8,26 @@ const choices = [
 
 class SettingsDropdown extends React.Component {
 
-
-
   makeItRain = () => {
-    console.log("Time to make it rain!")
     let container = document.getElementById('moneyContainer')
     let i = 0
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    let getRandomInt = (min, max) => {
+      min = Math.ceil(min)
+      max = Math.floor(max)
+      return Math.floor(Math.random() * (max - min)) + min
+    }
     let interval = setInterval(function() {
-      let getRandomInt = (min, max) => {
-        min = Math.ceil(min)
-        max = Math.floor(max)
-        return Math.floor(Math.random() * (max - min)) + min
-      }
       container.insertAdjacentHTML('beforeEnd', `<i id="${i}" class="huge dollar icon moneyMoney" style="left: ${getRandomInt(0, w)}px"></i>`)
       let dollar = document.getElementById(i)
       setTimeout(() => {
         dollar.className += ' doAnimate'
-      }, 67)
+      }, 88)
       i += 1
-      if (i >= 222) clearInterval(interval)
+      if (i >= 200) {
+        clearInterval(interval)
+        i = 0
+      }
     }, 13)
   }
 

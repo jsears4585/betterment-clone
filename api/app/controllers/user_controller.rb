@@ -2,7 +2,7 @@ class UserController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    userHoldings = user.holdings.all
+    userHoldings = user.users_holdings.all
     return_user_data = {
       user: user,
       holdings: userHoldings

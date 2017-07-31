@@ -2,6 +2,9 @@
 
 html { height: 90% }
 
+.Red { color: red }
+.Green { color: green }
+
 #moneyContainer {
   background: transparent;
   width: 100%;
@@ -10,11 +13,13 @@ html { height: 90% }
   bottom: 119px;
 }
 
+.tickerPrice { float: right; }
+
 .moneyMoney {
   color: #1dc087;
-  -webkit-transition: all 3s ease-in-out;
-  -moz-transition: all 3s ease-in-out;
-  -o-transition: all 3s ease-in-out;
+  -webkit-transition: all 2.8s ease-in-out;
+  -moz-transition: all 2.8s ease-in-out;
+  -o-transition: all 2.8s ease-in-out;
   position: absolute;
   z-index: 99999999;
 }
@@ -105,6 +110,11 @@ html, body {
 }
 
 .header { color: #425a7f!important; }
+
+.ui .card .content .header {
+  color: #1cbd85!important;
+  font-size: 1.2em!important;
+}
 
 .ui.card:first-child { margin-top: 64px!important; }
 
