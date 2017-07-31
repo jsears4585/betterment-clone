@@ -16,7 +16,9 @@ class ModalContainer extends Component {
       'If you lost 10% of your portfolio in a month...',
     ],
     riskType: null,
-    modalOpen: true
+    modalOpen: true,
+    userTotal: 0
+
   }
 
   nextQuestion = () => {
@@ -28,7 +30,6 @@ class ModalContainer extends Component {
     } else {
       this.setState({ currentQuestionIndex: this.state.currentQuestionIndex + 1 })
     }
-
     return this.state.questionsArray[this.state.currentQuestionIndex]
   }
 
@@ -36,10 +37,18 @@ class ModalContainer extends Component {
     this.setState({ modalOpen: false })
   }
 
-  formComponent
+
+  handleUserTotal = (number) => {
+    this.setState({
+      userTotal: number
+    })
+  }
+
+  handleUserTotal = (number) => {
+    console.log(number, "usertotal")
+  }
 
   render() {
-    console.log(this.state.isLastQuestion)
     let componentToRender
     if (!this.state.isLastQuestion) {
       componentToRender =
@@ -49,8 +58,6 @@ class ModalContainer extends Component {
         currentQuestion={this.state.questionsArray[this.state.currentQuestionIndex]}
 
       />
-
-
     } else {
       componentToRender =
       <PortfolioSelector handleClose={this.handleClose} />
@@ -62,7 +69,7 @@ class ModalContainer extends Component {
         onClose={this.handleClose}
       >
       {componentToRender}
-      <Form questions={this.state.currentQuestionIndex} isLastQuestion={this.state.isLastQuestion}/>
+      <Form questions={this.state.currentQuestionIndex} isLastQuestion={this.state.isLastQuestion} handleUserTotal={this.handleUserTotal}/>
       </Modal>
     )
   }
