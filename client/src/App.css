@@ -98,3 +98,25 @@ html, body {
 }
 
 .icon { cursor:pointer; }
+
+
+.add-funds-form #form-amount-input:focus {
+    background-color: lightblue;
+    text-align: center!important;
+}
+
+.form-submit-button {
+  margin-left: 12px;
+}
+
+.banks {
+  font-size: 25px;
+}
+
+.funds-headers {
+  font-size: 35px!important;
+}
+
+.add-funds-modal {
+  text-align: center!important;
+}
