@@ -8,6 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div id="moneyContainer"></div>
         <div id="logo_container">
           <svg id="svg_logo" viewBox="0 0 233.2 113.2" width="100%" height="100%">
             <g fill="#01B2E5">

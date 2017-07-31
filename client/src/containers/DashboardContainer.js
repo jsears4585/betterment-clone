@@ -62,6 +62,7 @@ class DashboardContainer extends Component {
   render() {
     return (
       <div className="ui raised padded container segment dashboardContainer">
+        <div id='dollarContainer'></div>
         <Grid divided='vertically'>
           <Grid.Row columns={3}>
             <Grid.Column width={3}>
@@ -75,7 +76,7 @@ class DashboardContainer extends Component {
               />
             </Grid.Column>
             <Grid.Column width={4} id="accordionDiv">
-              <SettingsDropdown  />
+              <SettingsDropdown />
               <DetailsAccordion
                 selectFund={this.handleFundSelect}
               />
