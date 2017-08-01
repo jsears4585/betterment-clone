@@ -1,15 +1,65 @@
 import React from 'react'
+import ReactHighcharts from 'react-highcharts'
 import { Button, Header, Modal, Container, Grid } from 'semantic-ui-react'
 
 import '../App.css'
 
 const PortfolioSelector = ({handleClose}) => {
+  const conservativeConfig = {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Conservative Portfolio'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [
+        {
+            name: 'US Bond',
+            y: 40,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'US Equity',
+            y: 30
+        }, {
+            name: 'Intl Bond',
+            y: 20
+        }, {
+            name: 'Intl Equity',
+            y: 10
+        }]
+    }]
+  }
+
   return (
     <Modal.Content>
       <Grid divided='vertically'>
         <Grid.Row columns={2}>
           <Grid.Column width={2}>
-            <img alt="" src="/images/pie-chart.png" onClick={()=>console.log('port 1 clicked')} /><br />
+            <ReactHighcharts config={conservativeConfig}>
+            </ReactHighcharts><br />
             <img alt="" src="/images/pie-chart.png" onClick={()=>console.log('port 2 clicked')} /><br />
             <img alt="" src="/images/pie-chart.png" onClick={()=>console.log('port 3 clicked')} />
           </Grid.Column>

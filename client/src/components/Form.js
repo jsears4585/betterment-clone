@@ -29,11 +29,11 @@ export default class Name extends Component{
   }
 
   addUserTotal = () => {
-  return parseInt(this.state.userAge, 10) + parseInt(this.state.userCategory, 10) + parseInt(this.state.userRisk, 10)
+    return parseInt(this.state.userAge, 10) + parseInt(this.state.userCategory, 10) + parseInt(this.state.userRisk, 10)
   }
 
   render(){
-      if (this.props.questions=== 0) {
+      if (this.props.questions === 0) {
         return (
           <form >
             <input type="radio" name="18-30" value="3" checked={this.state.userAge === "3"} onChange={this.handleUserAge}  /> 18-30
