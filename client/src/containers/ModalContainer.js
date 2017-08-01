@@ -52,7 +52,7 @@ class ModalContainer extends Component {
     let componentToRender
     if (!this.state.isLastQuestion) {
       componentToRender =
-      <Survey
+      <Survey className="survey"
         buttonText={this.state.buttonText}
         nextQuestion={this.nextQuestion}
         currentQuestion={this.state.questionsArray[this.state.currentQuestionIndex]}

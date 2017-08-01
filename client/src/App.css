@@ -99,7 +99,7 @@ html, body {
 
 .icon { cursor:pointer; }
 
-
+/*AddFundsModel*/
 .add-funds-form #form-amount-input:focus {
     background-color: lightblue;
     text-align: center!important;
@@ -127,4 +127,25 @@ html, body {
 
 .banks #add-bank {
   margin-left: 20px!important;
+}
+
+/*ModalContainer */
+
+.modal .description p {
+  font-size: 32px!important;
+  text-align: center!important;
+}
+
+.ui.basic.primary.button {
+  float: right;
+  margin: 10px;
+}
+
+
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 8px;
+
 }
