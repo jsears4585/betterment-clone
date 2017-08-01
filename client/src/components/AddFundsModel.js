@@ -7,19 +7,18 @@ export default class AddFundsModal extends React.Component{
     super()
     this.state = {
       bankOptions: [
-    {
+      {
         text: 'Bank Of America',
         value: 'Bank Of America'
-    },
-    {
-      text: "TD Bank",
-      value: 'TD Bank'
+      },
+      {
+        text: "TD Bank",
+        value: 'TD Bank'
+      }
+      ],
+      addBankForm: false,
+      bankInput: ""
     }
-    ],
-    addBankForm: false,
-    bankInput: ""
-  }
-
   }
 
   handleClickAddBank = () => {
@@ -28,7 +27,8 @@ export default class AddFundsModal extends React.Component{
     })
   }
 
-  handleClickCloseBank = () => {
+  newBank = () => {
+    console.log('hit')
     this.setState({
       addBankForm: false
     })
@@ -38,11 +38,9 @@ export default class AddFundsModal extends React.Component{
     this.setState({
       bankInput: event.target.value
     })
-
   }
 
   handleFormSubmit = (event) => {
-    debugger
     event.preventDefault()
     this.setState({
       bankOptions: [...this.state.bankOptions,
@@ -50,6 +48,7 @@ export default class AddFundsModal extends React.Component{
         value: this.state.bankInput}
       ]
     })
+    this.newBank()
   }
 
   render(){
@@ -66,9 +65,8 @@ export default class AddFundsModal extends React.Component{
               { !this.state.addBankForm ? <div></div> :
               <form onSubmit={this.handleFormSubmit}>
                 <input type="text" name="bank" id="add-bank-form" onChange={this.handleFormInput}/>
-                <Button type="submit" color="blue"  >Add</Button>
+                <Button type="submit" color="blue" >Add</Button>
               </form>
-
             }
             </div>
         <Modal.Description>
