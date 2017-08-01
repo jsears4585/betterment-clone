@@ -48,7 +48,7 @@ class App extends Component {
               <path d="M211.1,61.5V19.7h6.7l8.8,24h0.1v-24h6.5v41.9h-6.3l-9.2-26.2h-0.1v26.2L211.1,61.5L211.1,61.5z"></path>
             </g>
           </svg>
-          <span id="financial_logo">Financal</span>
+          <span id="financial_logo">Financial</span>
         </div>
         <ModalContainer />
         <DashboardContainer handleClickAddFunds={this.handleClickAddFunds} />
