@@ -36,7 +36,6 @@ class ModalContainer extends Component {
     this.setState({ modalOpen: false })
   }
 
-
   handleUserTotal = (number) => {
     this.setState({
       userTotal: number
@@ -47,8 +46,8 @@ class ModalContainer extends Component {
     console.log(number, "usertotal")
   }
 
-
   render() {
+
     let componentToRender
     if (!this.state.isLastQuestion) {
       componentToRender =
@@ -56,7 +55,6 @@ class ModalContainer extends Component {
         buttonText={this.state.buttonText}
         nextQuestion={this.nextQuestion}
         currentQuestion={this.state.questionsArray[this.state.currentQuestionIndex]}
-
       />
     } else {
       componentToRender =

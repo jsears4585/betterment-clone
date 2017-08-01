@@ -6,6 +6,7 @@ import AddFunds from '../components/AddFunds'
 import PrimaryChart from '../components/PrimaryChart'
 import DetailsAccordion from '../components/DetailsAccordion'
 import SettingsDropdown from '../components/SettingsDropdown'
+import AddFundsModal from '../components/AddFundsModal'
 
 import VOO from '../data/VOO.js'
 import BND from '../data/BND.js'
@@ -160,7 +161,6 @@ class DashboardContainer extends Component {
                 imageLink={this.state.userImage}
                 userTotal={this.state.userTotal}
               />
-              <AddFundsModal />
               <AddFunds handleClickAddFunds={this.props.handleClickAddFunds} />
             </Grid.Column>
             <Grid.Column width={9}>

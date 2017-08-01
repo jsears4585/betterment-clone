@@ -3,7 +3,7 @@ import './App.css';
 
 import ModalContainer from './containers/ModalContainer'
 import DashboardContainer from './containers/DashboardContainer'
-import AddFundsModal from './components/AddFundsModel'
+import AddFundsModal from './components/AddFundsModal'
 
 class App extends Component {
   constructor() {
@@ -28,7 +28,6 @@ class App extends Component {
   render() {
 
     return (
-
       <div>
         <div id="moneyContainer"></div>
 
@@ -55,7 +54,7 @@ class App extends Component {
         <DashboardContainer handleClickAddFunds={this.handleClickAddFunds} />
         {this.state.AddFundsModalShow ? <AddFundsModal handleClickExitFundsModel={this.handleClickExitFundsModel} /> : <div><span></span></div> }
       </div>
-    );
+    )
   }
 }
 
