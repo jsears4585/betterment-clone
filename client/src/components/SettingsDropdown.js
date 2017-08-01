@@ -9,20 +9,28 @@ const choices = [
 class SettingsDropdown extends React.Component {
 
   makeItRain = () => {
-    let container = document.getElementById('moneyContainer')
+    let container = document.getElementById('moneyContainer') //getContainer
     let i = 0
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    let getRandomInt = (min, max) => {
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0); //getViewport
+    let getRandomInt = (min, max) => { //random Func
       min = Math.ceil(min)
       max = Math.floor(max)
       return Math.floor(Math.random() * (max - min)) + min
     }
+
     let interval = setInterval(function() {
+
+      // this generates the dollar sign
       container.insertAdjacentHTML('beforeEnd', `<i id="${i}" class="huge dollar icon moneyMoney" style="left: ${getRandomInt(0, w)}px"></i>`)
+
       let dollar = document.getElementById(i)
+
+      // this fires the animation
       setTimeout(() => {
         dollar.className += ' doAnimate'
       }, 88)
+
+      // this does it 200 times
       i += 1
       if (i >= 200) {
         clearInterval(interval)

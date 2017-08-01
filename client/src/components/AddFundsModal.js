@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Button, Header, Icon, Form, Input, Dropdown } from 'semantic-ui-react'
+import { Modal, Button, Header, Form, Input, Dropdown } from 'semantic-ui-react'
 
 export default class AddFundsModal extends React.Component {
   constructor(){

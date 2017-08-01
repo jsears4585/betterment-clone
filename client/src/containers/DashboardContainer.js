@@ -6,7 +6,6 @@ import AddFunds from '../components/AddFunds'
 import PrimaryChart from '../components/PrimaryChart'
 import DetailsAccordion from '../components/DetailsAccordion'
 import SettingsDropdown from '../components/SettingsDropdown'
-import AddFundsModal from '../components/AddFundsModal'
 
 import VOO from '../data/VOO.js'
 import BND from '../data/BND.js'
@@ -72,7 +71,7 @@ class DashboardContainer extends Component {
       } else {
         console.log('error time')
       }
-    }, 4000)
+    }, 5000)
 
     // 60 Second Refresh Interval
     setInterval(() => {

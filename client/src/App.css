@@ -5,6 +5,10 @@ html { height: 90% }
 .Red { color: red }
 .Green { color: green }
 
+.portfolioButton {
+  margin-top: 20px!important;
+}
+
 #moneyContainer {
   background: transparent;
   width: 100%;
@@ -131,9 +135,12 @@ html, body {
 .icon { cursor:pointer; }
 
 /*AddFundsModel*/
-.add-funds-form #form-amount-input:focus {
-    background-color: lightblue;
-    text-align: center!important;
+#form-amount-input {
+  text-align: center!important;
+}
+
+.ui.form .field .ui.input, .ui.form .fields .field .ui.input, .ui.form .wide.field .ui.input {
+  width: 60%!important;
 }
 
 .form-submit-button {
@@ -154,6 +161,8 @@ html, body {
 
 .banks {
   display: inline-block;
+  font-size: 15px!important;
+  margin: 15px!important;
 }
 
 .banks #add-bank {
@@ -178,5 +187,16 @@ html, body {
     padding: 0;
     margin-left: 15px;
     margin-right: 8px;
+}
 
+.conservativeDesc {
+  margin-top: 25px!important;
+}
+
+.moderateDesc {
+  margin-top: 82px!important;
+}
+
+.aggressiveDesc {
+  margin-top: 88px!important;
 }
