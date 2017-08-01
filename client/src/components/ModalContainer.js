@@ -16,7 +16,7 @@ class ModalContainer extends Component {
       'If you lost 10% of your portfolio in a month...',
     ],
     riskType: null,
-    modalOpen: true,
+    modalOpen: false,
     userTotal: 0,
   }
 
@@ -52,7 +52,7 @@ class ModalContainer extends Component {
     let componentToRender
     if (!this.state.isLastQuestion) {
       componentToRender =
-      <Survey className="survey"
+      <Survey
         buttonText={this.state.buttonText}
         nextQuestion={this.nextQuestion}
         currentQuestion={this.state.questionsArray[this.state.currentQuestionIndex]}

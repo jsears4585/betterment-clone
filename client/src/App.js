@@ -3,12 +3,35 @@ import './App.css';
 
 import ModalContainer from './containers/ModalContainer'
 import DashboardContainer from './containers/DashboardContainer'
+import AddFundsModal from './components/AddFundsModel'
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      AddFundsModalShow: false,
+    }
+  }
+
+  handleClickAddFunds = () => {
+    this.setState({
+      AddFundsModalShow: true,
+    })
+  }
+
+  handleClickExitFundsModel = () => {
+    this.setState({
+      AddFundsModalShow: false
+    })
+  }
+
   render() {
+
     return (
+
       <div>
         <div id="moneyContainer"></div>
+
         <div id="logo_container">
           <svg id="svg_logo" viewBox="0 0 233.2 113.2" width="100%" height="100%">
             <g fill="#01B2E5">
@@ -29,7 +52,8 @@ class App extends Component {
           <span id="financial_logo">Financal</span>
         </div>
         <ModalContainer />
-        <DashboardContainer />
+        <DashboardContainer handleClickAddFunds={this.handleClickAddFunds} />
+        {this.state.AddFundsModalShow ? <AddFundsModal handleClickExitFundsModel={this.handleClickExitFundsModel} /> : <div><span></span></div> }
       </div>
     );
   }

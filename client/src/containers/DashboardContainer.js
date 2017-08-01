@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Grid } from 'semantic-ui-react'
 
 import ProfileSection from '../components/ProfileSection'
-import AddFundsModal from '../components/AddFundsModal'
+import AddFunds from '../components/AddFunds'
 import PrimaryChart from '../components/PrimaryChart'
 import DetailsAccordion from '../components/DetailsAccordion'
 import SettingsDropdown from '../components/SettingsDropdown'
@@ -161,6 +161,7 @@ class DashboardContainer extends Component {
                 userTotal={this.state.userTotal}
               />
               <AddFundsModal />
+              <AddFunds handleClickAddFunds={this.props.handleClickAddFunds} />
             </Grid.Column>
             <Grid.Column width={9}>
               <PrimaryChart

@@ -47,7 +47,7 @@ export default class Name extends Component{
           total: this.state.total + parseInt(this.state.userAge, 10)
         })
         return (
-          <form>
+          <form class="form-questions">
             <input type="radio" name="Saving for retirement" value="1"  checked={this.state.userCategory === "1"} onChange={this.handleUserCategory}/> Saving for retirement
             <input type="radio" name="Other" value="0" checked={this.state.userCategory === "0"} onChange={this.handleUserCategory}/> Other
           </form>
@@ -63,7 +63,7 @@ export default class Name extends Component{
           total: this.state.total + parseInt(this.state.userCategory, 10)
         })
         return (
-          <form>
+          <form class="form-questions">
             <input type="radio" name="Liquidate porfolio" value="3"  checked={this.state.userRisk === "3"} onChange={this.handleUserRisk}/> Liquidate porfolio
             <input type="radio" name="Sell some 50% of assets" value="2"  checked={this.state.userRisk === "2"} onChange={this.handleUserRisk}/> Sell some 50% of assets
             <input type="radio" name="Buy more assets" value="1"  checked={this.state.userRisk === "1"} onChange={this.handleUserRisk}/> Buy more assets
