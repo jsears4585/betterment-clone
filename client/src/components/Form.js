@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-let total = 0
 
 export default class Name extends Component{
 
@@ -30,11 +29,11 @@ export default class Name extends Component{
   }
 
   addUserTotal = () => {
-  return  parseInt(this.state.userAge, 10) + parseInt(this.state.userCategory, 10) + parseInt(this.state.userRisk, 10)
+    return parseInt(this.state.userAge, 10) + parseInt(this.state.userCategory, 10) + parseInt(this.state.userRisk, 10)
   }
 
   render(){
-      if (this.props.questions=== 0) {
+      if (this.props.questions === 0) {
         return (
           <form >
             <input type="radio" name="18-30" value="3" checked={this.state.userAge === "3"} onChange={this.handleUserAge}  /> 18-30
@@ -44,7 +43,9 @@ export default class Name extends Component{
           </form>
         )
       } else if (this.props.questions === 1) {
-        this.state.total = this.state.total + parseInt(this.state.userAge, 10)
+        this.setState({
+          total: this.state.total + parseInt(this.state.userAge, 10)
+        })
         return (
           <form class="form-questions">
             <input type="radio" name="Saving for retirement" value="1"  checked={this.state.userCategory === "1"} onChange={this.handleUserCategory}/> Saving for retirement
@@ -52,12 +53,15 @@ export default class Name extends Component{
           </form>
         )
       } else if (this.props.isLastQuestion && this.props.questions === 2) {
-        this.state.total = this.state.total + this.state.userRisk
+        this.setState({
+          total: this.state.total + this.state.userRisk
+        })
         this.props.handleUserTotal(this.addUserTotal())
         return (<span></span>)
       } else if (this.props.questions === 2) {
-        this.state.total = this.state.total + parseInt(this.state.userCategory, 10)
-
+        this.setState({
+          total: this.state.total + parseInt(this.state.userCategory, 10)
+        })
         return (
           <form class="form-questions">
             <input type="radio" name="Liquidate porfolio" value="3"  checked={this.state.userRisk === "3"} onChange={this.handleUserRisk}/> Liquidate porfolio
